@@ -1,26 +1,129 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #e0edf7;
+  color: #111;
+  font-family: "MS PGothic", "Osaka", "Meiryo", sans-serif;
+  line-height: 1.55;
+}
+
+a {
+  color: #0038a8;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #d80000;
+}
+
+.retro-page {
+  max-width: 900px;
+  margin: 14px auto;
+  padding: 10px;
+  border: 2px solid #222;
+  background: #fff;
+}
+
+.retro-header {
+  border: 2px solid #222;
+  background: linear-gradient(#d9ecff, #b7d8ff);
+  padding: 12px;
+  margin-bottom: 10px;
+}
+
+.retro-header h1 {
+  margin: 4px 0;
+  font-size: 1.6rem;
+}
+
+.retro-kicker,
+.retro-subtitle {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.retro-nav {
+  border: 2px solid #222;
+  background: #f7f7f7;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.retro-nav ul {
+  list-style: square;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 4px 12px;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.retro-main {
+  display: grid;
+  gap: 10px;
+}
+
+.retro-frame {
+  border: 2px solid #222;
+  background: #fffdf1;
+}
+
+.retro-frame-title {
+  margin: 0;
+  padding: 6px 10px;
+  font-size: 1rem;
+  border-bottom: 2px solid #222;
+  background: #fff3a1;
+}
+
+.retro-frame-content {
+  padding: 10px;
+}
+
+.retro-frame ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.retro-footer {
+  margin-top: 10px;
+  border: 2px solid #222;
+  background: #f4f4f4;
+  padding: 8px 10px;
+  font-size: 0.85rem;
+}
+
+.retro-footer p {
+  margin: 2px 0;
+}
+
+.retro-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.retro-table th,
+.retro-table td {
+  border: 1px solid #333;
+  padding: 6px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.retro-table th {
+  width: 180px;
+  background: #eef4ff;
+}
+
+.retro-contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.retro-contact-list li + li {
+  margin-top: 4px;
 }
