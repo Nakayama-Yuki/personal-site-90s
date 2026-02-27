@@ -1,9 +1,8 @@
 export const profile = {
   name: "Yuki",
   title: "Web Hobbyist",
-  location: "Tokyo, Japan",
-  intro:
-    "こんにちは、Yukiです。懐かしいインターネット文化が好きで、週末に小さなWebアプリを作っています。",
+  location: "Japan",
+  intro: "こんにちは、Yukiです",
   interests: ["Next.js", "TypeScript", "個人開発", "レトロWebデザイン"],
 };
 
