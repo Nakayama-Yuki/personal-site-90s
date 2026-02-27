@@ -1,19 +1,27 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import useSWR from "swr";
+
+type CounterResponse = {
+  count: number;
+};
+
+const fetcher = async (url: string): Promise<CounterResponse> => {
+  const res = await fetch(url);
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch counter");
+  }
+
+  return res.json();
+};
 
 export default function AccessCounter() {
-  const [count, setCount] = useState<number | null>(null);
+  const { data } = useSWR<CounterResponse>("/api/counter", fetcher);
 
-  useEffect(() => {
-    fetch("/api/counter")
-      .then((res) => res.json())
-      .then((data) => setCount(data.count))
-      .catch(() => setCount(null));
-  }, []);
+  const count = data?.count ?? null;
 
-  const formatted =
-    count !== null ? String(count).padStart(5, "0") : "-----";
+  const formatted = count !== null ? String(count).padStart(5, "0") : "-----";
 
   return (
     <span>
