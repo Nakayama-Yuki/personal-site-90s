@@ -1,13 +1,13 @@
-import Database from "better-sqlite3";
+import { DatabaseSync } from "node:sqlite";
 import path from "path";
 
 const DB_PATH = path.join(process.cwd(), "data", "counter.db");
 
-let db: Database.Database | null = null;
+let db: DatabaseSync | null = null;
 
-export function getDb(): Database.Database {
+export function getDb(): DatabaseSync {
   if (!db) {
-    db = new Database(DB_PATH);
+    db = new DatabaseSync(DB_PATH);
     db.exec(`
       CREATE TABLE IF NOT EXISTS counter (
         id INTEGER PRIMARY KEY CHECK (id = 1),
@@ -20,7 +20,9 @@ export function getDb(): Database.Database {
 }
 
 export function getCount(): number {
-  const row = getDb().prepare("SELECT count FROM counter WHERE id = 1").get() as { count: number };
+  const row = getDb()
+    .prepare("SELECT count FROM counter WHERE id = 1")
+    .get() as { count: number };
   return row.count;
 }
 
