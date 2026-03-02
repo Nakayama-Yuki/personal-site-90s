@@ -1,4 +1,4 @@
-import { RetroFrame } from "@/components/retro/RetroFrame";
+import { RetroFrame } from "@/components/RetroFrame";
 import { favoriteLinks } from "@/lib/site-data";
 
 export default function LinksPage() {

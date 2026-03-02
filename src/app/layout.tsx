@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { RetroFooter } from "@/components/retro/RetroFooter";
-import { RetroHeader } from "@/components/retro/RetroHeader";
-import { RetroNav } from "@/components/retro/RetroNav";
+import { RetroFooter } from "@/components/RetroFooter";
+import { RetroHeader } from "@/components/RetroHeader";
+import { RetroNav } from "@/components/RetroNav";
 import "./globals.css";
 
 export const metadata: Metadata = {

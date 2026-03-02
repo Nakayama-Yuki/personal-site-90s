@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { RetroFrame } from "@/components/retro/RetroFrame";
+import { RetroFrame } from "@/components/RetroFrame";
 import { profile, updates } from "@/lib/site-data";
 
 export default function Home() {

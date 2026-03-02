@@ -1,4 +1,4 @@
-import { RetroFrame } from "@/components/retro/RetroFrame";
+import { RetroFrame } from "@/components/RetroFrame";
 
 export default function ContactPage() {
   return (
