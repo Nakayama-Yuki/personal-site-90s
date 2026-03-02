@@ -3,7 +3,7 @@ export const profile = {
   title: "Web Hobbyist",
   location: "Japan",
   intro: "こんにちは、Yukiです",
-  interests: ["Next.js", "TypeScript", "個人開発", "レトロWebデザイン"],
+  interests: ["Next.js", "TypeScript"],
 };
 
 export const works = [
